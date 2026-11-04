@@ -79,7 +79,9 @@ BEGIN
         Source System: Customer Relationship Management (CRM)
     ============================================================================
     */
-
+    PRINT '=========================================';
+    PRINT 'Loading Bronze Layer';
+    PRINT '=========================================';
 
     /*
     ---------------------------------------------------------------------------
@@ -91,6 +93,9 @@ BEGIN
     ---------------------------------------------------------------------------
     */
 
+	PRINT '-----------------------------------------';
+	PRINT 'Loading CRM Tables';
+	PRINT '-----------------------------------------';
     -- Remove all existing records before performing a full reload.
     TRUNCATE TABLE bronze.crm_cust_info;
 
@@ -167,7 +172,9 @@ BEGIN
             Loads customer location information from the ERP source system.
     ---------------------------------------------------------------------------
     */
-
+	PRINT '-----------------------------------------';
+	PRINT 'Loading ERP Tables';
+	PRINT '-----------------------------------------';
     -- Remove all existing records before performing a full reload.
     TRUNCATE TABLE bronze.erp_loc_a101;
 
